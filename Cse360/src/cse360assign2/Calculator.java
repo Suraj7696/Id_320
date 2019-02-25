@@ -1,4 +1,4 @@
-package cse360assign3;
+package cse360assign2;
 /**
 * Program to implement a basic calculator
 * @author Suraj Atmakuri 
@@ -23,12 +23,11 @@ public class Calculator
 	}
 	/** 
 	    * Returns the total after performing the operations for the input
-	    * Can only be called if there is a '=' symbol in the input
 	    */
 	
 	public int getTotal () 
 	{
-		return 0;
+		return total;
 	}
 	/** 
 	    * Adds two numbers entered by the user
@@ -37,7 +36,7 @@ public class Calculator
 	    */
 	public void add (int value) 
 	{
-		
+		total = total + value;
 	}
 	/** 
 	    * Subtracts numbers entered by the user
@@ -46,7 +45,7 @@ public class Calculator
 	    */
 	public void subtract (int value) 
 	{
-		
+		total = total - value;
 	}
 	/** 
 	    * Multiplies numbers entered by the user
@@ -55,16 +54,16 @@ public class Calculator
 	    */
 	public void multiply (int value) 
 	{
-		
+		total = total * value;
 	}
 	/** 
 	    * Divides numbers entered by the user
 	    * @param value the number inserted by the user to perform 
-	    * 
+	    * the desired operation
 	    */
 	public void divide (int value)
 	{
-		
+		total = total / value;
 	}
 	/** 
 	    * Displays all the previous operations performed by the user
