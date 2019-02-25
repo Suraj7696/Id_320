@@ -12,7 +12,7 @@ public class Calculator
 {
 
 	private int total;
-	
+	private StringBuilder his = new StringBuilder();
 	/** 
 	    * Class constructor.
 	    */
@@ -20,6 +20,7 @@ public class Calculator
 	public Calculator () 
 	{
 		total = 0;  // not needed - included for clarity
+		his.append('0');
 	}
 	/** 
 	    * Returns the total after performing the operations for the input
@@ -37,6 +38,8 @@ public class Calculator
 	public void add (int value) 
 	{
 		total = total + value;
+		his.append('+');
+		his.append(value);
 	}
 	/** 
 	    * Subtracts numbers entered by the user
@@ -46,6 +49,8 @@ public class Calculator
 	public void subtract (int value) 
 	{
 		total = total - value;
+		his.append('-');
+		his.append(value);
 	}
 	/** 
 	    * Multiplies numbers entered by the user
@@ -55,6 +60,8 @@ public class Calculator
 	public void multiply (int value) 
 	{
 		total = total * value;
+		his.append('*');
+		his.append(value);
 	}
 	/** 
 	    * Divides numbers entered by the user
@@ -64,12 +71,17 @@ public class Calculator
 	public void divide (int value)
 	{
 		total = total / value;
+		his.append('/');
+		his.append(value);
 	}
 	/** 
 	    * Displays all the previous operations performed by the user
+	    * converting StringBuilder object into String object
 	    */
 	public String getHistory () 
 	{
-		return "";
+		String history = new String();
+		history = his.toString();
+		return history;
 	}
 }
