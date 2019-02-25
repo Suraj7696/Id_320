@@ -19,7 +19,7 @@ public class Calculator
 	
 	public Calculator () 
 	{
-		total = 0;  // not needed - included for clarity
+		total = 0;  
 		his.append('0');
 	}
 	/** 
