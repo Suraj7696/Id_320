@@ -1,5 +1,6 @@
 package cse360assign2;
 /**
+ * link to the git repository : https://github.com/Suraj7696/Id_320.git
 * Program to implement a basic calculator
 * @author Suraj Atmakuri 
 * Class-ID: 320
@@ -70,7 +71,16 @@ public class Calculator
 	    */
 	public void divide (int value)
 	{
+		boolean zeroFound = false;
+		if(value ==0)
+		{
+			total=0;
+			zeroFound = true;
+		}
+		if(!zeroFound)
+		{
 		total = total / value;
+		}
 		his.append('/');
 		his.append(value);
 	}
@@ -80,7 +90,7 @@ public class Calculator
 	    */
 	public String getHistory () 
 	{
-		String history = new String();
+		String history;
 		history = his.toString();
 		return history;
 	}
